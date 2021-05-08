@@ -104,7 +104,10 @@ class DescriptorTransfer(ViewSBPacket):
         # Say that five times fast.
 
         # FIXME: memoize this?
-        parsed_data = cls.BINARY_FORMAT.parse(data)
+        try:
+            parsed_data = cls.BINARY_FORMAT.parse(data)
+        except:
+            return None, 0
 
         # If we don't want to prepare the descriptor for display, return it directly.
         if not use_pretty_names:
