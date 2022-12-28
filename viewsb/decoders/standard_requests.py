@@ -9,7 +9,7 @@ This file is part of ViewSB
 # pylint: disable=maybe-no-member,access-member-before-definition
 
 
-from usb_protocol.types import USBRequestType, USBRequestRecipient
+from usb_construct.types import USBRequestType, USBRequestRecipient
 
 from ..decoder import ViewSBDecoder, UnhandledPacket
 from ..packet import USBControlTransfer

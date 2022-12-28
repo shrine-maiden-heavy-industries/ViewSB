@@ -11,7 +11,7 @@ import collections
 from datetime import timedelta
 from construct import *
 
-from usb_protocol.types import USBDirection, USBPacketID
+from usb_construct.types import USBDirection, USBPacketID
 
 from ..decoder import ViewSBDecoder, UnhandledPacket
 from ..packet import USBPacket, MalformedPacket, USBStartOfFrame, USBStartOfFrameCollection, \
@@ -608,6 +608,3 @@ class USBControlRequestGrouper(ViewSBDecoder):
         # Case 3: we have three packets -- and must have completed the control request. Emit.
         elif len(packets_on_pipe) == 3:
             self.emit_control_request(pipe)
-
-
-

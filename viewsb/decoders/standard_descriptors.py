@@ -8,11 +8,11 @@ This file is part of ViewSB
 
 from construct import this, Bytes
 
-import usb_protocol
+import usb_construct
 
-from usb_protocol.types.descriptor import DescriptorFormat, DescriptorField, DescriptorNumber
-from usb_protocol.types.descriptors.partial import DeviceDescriptor, ConfigurationDescriptor, InterfaceDescriptor
-from usb_protocol.types.descriptors.partial import EndpointDescriptor, DeviceQualifierDescriptor, StringDescriptor
+from usb_construct.types.descriptor import DescriptorFormat, DescriptorField, DescriptorNumber
+from usb_construct.types.descriptors.partial import DeviceDescriptor, ConfigurationDescriptor, InterfaceDescriptor
+from usb_construct.types.descriptors.partial import EndpointDescriptor, DeviceQualifierDescriptor, StringDescriptor
 
 from .standard_requests import GetDescriptorRequest
 
@@ -239,7 +239,7 @@ class GetStringDescriptorRequest(GetDescriptorRequest):
 
             # Add the language to our list.
             try:
-                entries.append((langid, usb_protocol.types.LANGUAGE_NAMES[langid]))
+                entries.append((langid, usb_construct.types.LANGUAGE_NAMES[langid]))
             except KeyError:
                 entries.append((langid, None))
 

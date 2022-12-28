@@ -5,7 +5,7 @@ This file is part of ViewSB.
 """
 
 from ..standard_descriptors import GetClassSpecificDescriptorRequest
-from usb_protocol.types.descriptor import DescriptorFormat, DescriptorField, DescriptorNumber
+from usb_construct.types.descriptor import DescriptorFormat, DescriptorField, DescriptorNumber
 
 
 class GetCDCHeaderRequest(GetClassSpecificDescriptorRequest):

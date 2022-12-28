@@ -5,7 +5,7 @@ Functionality for working with USB descriptors.
 This file is part of ViewSB
 """
 
-from usb_protocol.types.descriptor import DescriptorFormat, DescriptorField
+from usb_construct.types.descriptor import DescriptorFormat, DescriptorField
 from construct.core import ConstError, ConstructError
 
 from .packet import ViewSBPacket

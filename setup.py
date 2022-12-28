@@ -32,7 +32,7 @@ setup(
         'bitstruct',
         'tableprint',
         'urwid',
-        'usb_protocol',
+        'usb_construct',
     ],
     extras_require={
         'qt': ['pyside6', 'qt-material'],
@@ -44,7 +44,6 @@ setup(
     },
     dependency_links=[
         'git+https://git@github.com/usb-tools/pyopenvizsla.git@master#egg=pyopenvizsla',
-        'git+https://git@github.com/usb-tools/python-usb-protocol.git@master#egg=usb_protocol',
     ],
     description='python-based USB Analyzer toolkit (and USB analyzer)',
     long_description='python-based USB Analyzer toolkit (and USB analyzer)', # FIXME

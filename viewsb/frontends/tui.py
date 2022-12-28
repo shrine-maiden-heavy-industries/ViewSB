@@ -9,7 +9,7 @@ import urwid
 import string
 import collections
 
-from usb_protocol.types import USBDirection
+from usb_construct.types import USBDirection
 
 from ..frontend import ViewSBFrontend
 

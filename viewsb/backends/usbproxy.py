@@ -9,7 +9,7 @@ This file is part of ViewSB
 
 from datetime import datetime, timedelta
 
-from usb_protocol.types import USBPacketID, USBDirection
+from usb_construct.types import USBPacketID, USBDirection
 
 from ..backend import ViewSBBackend
 from ..packet import USBControlTransfer, USBSetupTransaction, USBTransaction

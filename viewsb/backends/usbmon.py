@@ -11,9 +11,9 @@ import struct
 from datetime import timedelta
 from enum import Enum
 
-import usb_protocol
+import usb_construct
 
-from usb_protocol.types import USBDirection, USBRequestRecipient, USBRequestType, USBPacketID, USBTransferType
+from usb_construct.types import USBDirection, USBRequestRecipient, USBRequestType, USBPacketID, USBTransferType
 
 from ..backend import ViewSBBackend, FileBackend
 from ..packet import USBSetupTransfer, USBDataTransfer, USBStatusTransfer, USBControlTransfer, \
@@ -109,7 +109,7 @@ class USBMonEvent:
         properties['transfer_type']   = TransferType(properties['transfer_type'])
         properties['event_type']      = EventType(properties['event_type'])
         properties['direction']       = USBDirection.from_endpoint_address(properties['endpoint_address'])
-        properties['endpoint_number'] = usb_protocol.types.endpoint_number_from_address(properties['endpoint_address'])
+        properties['endpoint_number'] = usb_construct.types.endpoint_number_from_address(properties['endpoint_address'])
 
         # Finally, create the relevant event.
         return cls(**properties)

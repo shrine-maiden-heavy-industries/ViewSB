@@ -12,8 +12,8 @@ import binascii
 from enum import Flag, auto
 from construct import BitStruct, BitsInteger, BitsSwapped, Bytewise, Byte, Int16ul
 
-from usb_protocol.types import USBDirection, USBRequestType, USBRequestRecipient, USBPacketID
-from usb_protocol.types.descriptor import DescriptorFormat, DescriptorField
+from usb_construct.types import USBDirection, USBRequestType, USBRequestRecipient, USBPacketID
+from usb_construct.types.descriptor import DescriptorFormat, DescriptorField
 
 # XXX Temporary hack for __repr__.
 print_depth = 0

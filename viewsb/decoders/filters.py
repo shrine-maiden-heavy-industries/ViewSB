@@ -8,7 +8,7 @@ Includes functionality for e.g. breaking packets into transfers / transactions.
 This file is part of ViewSB
 """
 
-from usb_protocol.types import USBPacketID
+from usb_construct.types import USBPacketID
 
 from ..decoder import ViewSBDecoder
 from ..packet import USBPacket
