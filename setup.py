@@ -36,7 +36,7 @@ setup(
     ],
     extras_require={
         'qt': ['pyside6', 'qt-material'],
-        'luna': ['luna'],
+        'sol': ['sol_usb'],
         'openvizla': ['pyopenvizsla'],
         'phywhisperer': ['phywhisperer'],
         'rhododendron': ['greatfet'],

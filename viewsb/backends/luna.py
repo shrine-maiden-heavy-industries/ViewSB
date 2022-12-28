@@ -11,7 +11,7 @@ from ..backend import ViewSBBackend
 from ..packet import USBPacket
 
 try:
-    from luna.gateware.applets.analyzer import \
+    from sol_usb.gateware.applets.analyzer import \
         USBAnalyzerConnection, \
         USB_SPEED_FULL, USB_SPEED_HIGH, USB_SPEED_LOW
 
@@ -35,9 +35,9 @@ class LUNABackend(ViewSBBackend):
     @staticmethod
     def reason_to_be_disabled():
 
-        # If we can't import LUNA, it's probably not installed.
+        # If we can't import sol_usb, it's probably not installed.
         if not 'USBAnalyzerConnection' in globals():
-            return "python luna package not available"
+            return "python sol_usb package not available"
 
         return None
 
