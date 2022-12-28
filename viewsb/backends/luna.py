@@ -81,6 +81,7 @@ class LUNABackend(ViewSBBackend):
         self.analyzer.build_and_configure(self.capture_speed)
 
         # start capture
+        self.analyzer.start_capture()
         self._start_timestamp = datetime.now()
 
 
